@@ -1,0 +1,150 @@
+/* made by Poukam Pierre */
+
+*{
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html{
+    z-index: 1;
+    background-color: black;
+}
+
+body{
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.icon{
+    position: fixed;
+    color: white;
+    font-size: 1em;
+}
+
+.icon .fa{
+    font-size: 1.5em;
+    margin-right: 8px;
+}
+.activeHomeLink{
+    animation: forwardmovehome 0.5s ;
+    animation-timing-function: ease-in;
+}
+.activeAboutLink{
+    animation: forwardmoveabout 0.5s ;
+    animation-timing-function: ease-in;
+}
+.activeContactLink{
+    animation: forwardmovecontact 0.5s ;
+    animation-timing-function: ease-in;
+}
+.desactivateHomeLink{
+    animation: backwardmovehome 0.5s ;
+    animation-timing-function: ease-in;
+}
+.desactivateAboutLink{
+    animation: backwardmoveabout 0.5s ;
+    animation-timing-function: ease-in;
+}
+.desactivateContactLink{
+    animation: backwardmovecontact 0.5s ;
+    animation-timing-function: ease-in;
+}
+.homeLink{
+    top: 80%;
+    left: 3%;
+}
+.aboutLink{
+    top: 85%;
+    left: 4%;
+}
+.contactLink{
+    top: 90%;
+    left: 5%;
+}
+.mainContainer{
+    transform-origin: left top;
+    transition: transform 0.5s linear;
+    background-color: white;
+    z-index: 5;
+}
+
+.container{
+    padding: 5.6em;
+    margin: 0 350px 0 350px;
+}
+.containerBtn{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+.circle{
+    position: relative;
+    font-size: 30px;
+    color: white;
+    width: 200px;
+    background-color: coral;
+    height: 200px;
+    border-radius: 100px;
+    /* transform-origin: left top; */
+    transition: transform 0.5s linear;
+}
+#menuBtn, #cancelBtn{
+    position: absolute;
+    cursor: pointer;
+
+}
+#menuBtn{
+    top: 65%;
+    right: 20%;
+}
+#cancelBtn{
+    left: 15%;
+    top: 51%;
+}
+
+.circleIsRotate{
+    transform: rotate(-95deg);
+}
+
+.mainContainerIsRotate{
+    transform: rotate(-20deg);
+}
+
+h1{
+    margin: 0;
+}
+p{
+    font-size: 15px;
+}
+.nameImg{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+img{
+    width: 100%;
+}
+
+@keyframes forwardmovehome{
+    from {left: -8%;}
+    to {left: 3%;}
+}
+@keyframes forwardmoveabout{
+    from {left: -8%;}
+    to {left: 4%;}
+}
+@keyframes forwardmovecontact{
+    from {left: -8%;}
+    to {left: 5%;}
+}
+@keyframes backwardmovehome{
+    from {left: 3%;}
+    to {left: -8%;}
+}
+@keyframes backwardmoveabout{
+    from {left: 4%;}
+    to {left: -8%;}
+}
+@keyframes backwardmovecontact{
+    from {left: 5%;}
+    to {left: -8%;}
+}
